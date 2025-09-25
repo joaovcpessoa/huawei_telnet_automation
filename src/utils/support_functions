@@ -1,0 +1,19 @@
+import os
+import pytz
+from datetime import datetime
+
+class EnvironmentHelper:
+    def __init__(self, timezone='America/Sao_Paulo'):
+        self.timezone = pytz.timezone(timezone)
+
+    def get_environment_suffix(self):
+        environment = os.getenv('ENVIRONMENT', '').upper()
+        if environment == 'D':
+            return '_DEV'
+        elif environment == 'A':
+            return '_PRD'
+        else:
+            return '_HML'
+
+    def get_current_date(self):
+        return datetime.now(self.timezone).replace(tzinfo=None)
