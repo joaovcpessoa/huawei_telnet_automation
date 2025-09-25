@@ -1,8 +1,10 @@
 # SSH AUTOMATION
 
-Objetivo: Fornecer uma automação robusta para gerenciamento remoto de dispositivos Huawei via SSH, permitindo execução controlada de comandos, extração de informações operacionais e centralização de logs para análise.
+## Objetivo
 
-Requisitos funcionais:
+Fornecer uma automação robusta para gerenciamento remoto de dispositivos Huawei via SSH, permitindo execução controlada de comandos, extração de informações operacionais e centralização de logs para análise.
+
+## Requisitos funcionais
 
 1. Autenticação e Sessões
 - Suportar autenticação por chave pública/privada e usuário/senha.
