@@ -1,8 +1,8 @@
-# SSH AUTOMATION
+# Huawei Telnet Automation
 
 ## Objetivo
 
-Fornecer uma automação robusta para gerenciamento remoto de dispositivos Huawei via SSH, permitindo execução controlada de comandos, extração de informações operacionais e centralização de logs para análise.
+Fornecer uma automação robusta para gerenciamento remoto de dispositivos Huawei via Telnet, permitindo execução controlada de comandos, extração de informações operacionais e centralização de logs para análise.
 
 ## Requisitos funcionais
 
@@ -43,3 +43,28 @@ Entregáveis esperados:
 - Código-fonte bem documentado e testado.
 - Documentação de configuração e operação.
 - Scripts de deploy e instruções para integração com o repositório de logs.
+
+## Estrutura do Projeto
+
+Foram utilizadas as seguintes tecnologias:
+
+- Linguagem de programação: Python 3.13.3
+
+As pastas do projeto foram organizadas da seguinte forma:
+
+```bash
+├── docker/            # Configurações do container
+│   ├── requirements.txt
+│   └── Dockerfile
+├── logs/              # Armazena os logs da aplicação
+│   ├── huawei/        # Armazena os logs de execução dos comandos
+│       └── raw/       # Armazena os logs de resposta dos equipamentos
+├── src/
+│   ├── infraestructure/ # Módulo que configura o sistema de logs da aplicação
+│   ├── controllers/     # Módulo que aplicas as regras de negócio
+│   ├── routes/          # Módulo de rotas da API                  
+│   ├── services/        # Módulo de serviços: banco de dados e sessão Telnet
+│   ├── utils/           # Módulo de funções para suporte               
+│   └── main.py          # Ponto de entrada principal
+└── README.md
+```
